@@ -1,4 +1,29 @@
-<!--The whole content below can be removed with the new code.-->
+<div style="text-align:center">
 <div style="text-align:center" class="title">
-  <h1>{{title}}</h1>
+  <h1>{{uf.nome}}</h1>
+</div>
+
+<table align="center">
+  <tr>
+    <td> <p>ID: {{uf.id}}</p> </td>
+  </tr>
+  <tr>
+    <td> <p>Área: {{uf.area}}</p> </td>
+  </tr>
+  <tr>
+    <td> <p>Média municípios atendidos: {{media}}</p> </td>
+  </tr>
+</table>
+<h4 align ="center">MUNICIPIOS ATENDIDOS</h4>
+<table align="center">
+  <tr>
+    <td>
+      <div *ngFor="let municipio of uf_atendidos"> Ano: {{municipio.ano}} </div>
+    </td>
+    <td>
+      <div *ngFor="let municipio of uf_atendidos"> Quantidade: {{municipio.valor}} </div>
+    </td>
+  </tr>
+</table>
+
 </div>
