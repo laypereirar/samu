@@ -1,14 +1,14 @@
 <div style="text-align:center">
 <div style="text-align:center" class="title">
-  <h1>{{uf.nome}}</h1>
+  <h1>{{uf_dada.nome}}</h1>
 </div>
 
 <table align="center">
   <tr>
-    <td> <p>ID: {{uf.id}}</p> </td>
+    <td> <p>ID: {{uf_dada.id}}</p> </td>
   </tr>
   <tr>
-    <td> <p>Área: {{uf.area}}</p> </td>
+    <td> <p>Área: {{uf_dada.area}}</p> </td>
   </tr>
   <tr>
     <td> <p>Média municípios atendidos: {{media}}</p> </td>
@@ -18,10 +18,10 @@
 <table align="center">
   <tr>
     <td>
-      <div *ngFor="let municipio of uf_atendidos"> Ano: {{municipio.ano}} </div>
+      <div *ngFor="let mun of municipios_atendidos"> Ano: {{mun.ano}} </div>
     </td>
     <td>
-      <div *ngFor="let municipio of uf_atendidos"> Quantidade: {{municipio.valor}} </div>
+      <div *ngFor="let mun of municipios_atendidos"> Quantidade: {{mun.valor}} </div>
     </td>
   </tr>
 </table>

@@ -9,7 +9,7 @@ export class UFService {
     return UFs;
   }
 
-  getById(id: number): UF {
+  getPorID(id: number){
     for(let uf of UFs){
       if(uf.id == id) return uf;
     }
