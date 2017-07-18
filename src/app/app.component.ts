@@ -33,11 +33,11 @@ export class AppComponent implements OnInit {
       var qtd = 0;
       var total = 0;
       for(let mun of this.municipios_atendidos){
-        if(mun.uf_id == 27){
-          qtd++;
+        if(mun.uf_id === 27){
           total += mun.valor;
+          qtd++;
         }
-      return Math.round(total/qtd);
+      return total/qtd;
     }
   }
 }

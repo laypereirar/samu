@@ -11,6 +11,20 @@ export class SamuService {
     return VALORES;
   }
 
+  getMunicipioMedia(id: number): number {
+      let uf: UF;
+      let soma = 0;
+      let qtd = 0;
+      for (let entrada of VALORES){
+        if(entrada.uf_id === id)
+        {
+          soma += entrada.valor;
+          qtd++;
+        }
+      }
+      return soma/qtd;
+    }
+
   getPorUFMunicipiosAtendidosPorEstado(uf: UF): Dados[]{
     var total : Dados[] = [];
     for(let mun of VALORES){

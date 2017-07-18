@@ -1,29 +1,35 @@
 <div style="text-align:center">
-<div style="text-align:center" class="title">
+<div style="text-align:center">
   <h1>{{uf_dada.nome}}</h1>
 </div>
 
 <table align="center">
   <tr>
-    <td> <p>ID: {{uf_dada.id}}</p> </td>
+    <td> ID: {{uf_dada.id}} </td>
   </tr>
   <tr>
-    <td> <p>Área: {{uf_dada.area}}</p> </td>
+    <td> Área: {{uf_dada.area}} </td>
   </tr>
   <tr>
-    <td> <p>Média municípios atendidos: {{media}}</p> </td>
-  </tr>
-</table>
-<h4 align ="center">MUNICIPIOS ATENDIDOS</h4>
-<table align="center">
-  <tr>
-    <td>
-      <div *ngFor="let mun of municipios_atendidos"> Ano: {{mun.ano}} </div>
-    </td>
-    <td>
-      <div *ngFor="let mun of municipios_atendidos"> Quantidade: {{mun.valor}} </div>
-    </td>
+    <td> Média municípios atendidos: {{media}} </td>
   </tr>
 </table>
 
+
+<h4 align ="center">MUNICIPIOS ATENDIDOS</h4>
+<table align="center" border="1">
+  <tr>
+    <td>Ano</td>
+    <td>Municípios Atendidos</td>
+  </tr>
+  <tr *ngFor="let mun of municipios_atendidos">
+    <td>{{mun.ano}}</td>
+    <td>{{mun.valor}}</td>
+  </tr>
+</table>
+
+  <a routerLink="/resumo">Resumo</a>
+  <a routerLink="/dados-da-uf">Dados da UF</a>
+  <a routerLink="/todos-os-dados">Todos os dados</a>
+  <router-outlet></router-outlet>
 </div>
